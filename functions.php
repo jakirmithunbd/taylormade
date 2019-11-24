@@ -190,6 +190,6 @@ add_action( 'wp_footer', 'additional_scripts', 100 );
 
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){
-    return "<button class='btn' id='gform_submit_button_{$form["1"]}'>{$form['button']['text']}</button>";
+    return "<button class='btn' id='gform_submit_button_{$form["1"]}'>{$form['button']['text']}<span class=\"triangle\"></span></button>";
 }
 

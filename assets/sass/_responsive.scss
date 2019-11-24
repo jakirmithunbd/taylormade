@@ -236,6 +236,15 @@
         }
     }
 
+    .contact-information {
+        padding: 45px 0;
+
+        h1 {
+            font-size: 3rem;
+            padding-bottom: 30px;
+        }
+    }
+
     .about {
         padding: 65px 0;
 
@@ -270,6 +279,22 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .contact-area {
+        padding: 60px 0;
+    }
+
+    .contact-form {
+        padding: 30px;
+
+        .gform_heading {
+            margin-bottom: 35px!important;
+
+            .gform_title {
+                font-size: 2rem;
+            }
+        }
+    }
+
     .testimonial {
         padding: 55px 0; 
 
@@ -332,9 +357,6 @@
             }
         }
     }
-}
-
-@media only screen and (max-width: 767px) {
 
     .widget {
         text-align: center !important;
@@ -455,6 +477,22 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .contact-area {
+        padding: 45px 0 0;
+
+        .contact-information {
+
+            .info-list {
+                display: inherit;
+
+                a {
+                    display: block;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+
     .service-list {
 
         .service-content {

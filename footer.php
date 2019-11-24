@@ -19,7 +19,7 @@
                             </div>
                             <div class="info-item">
                                 <span class="fas fa-map-marker-alt"></span>
-                                <a href="<?php echo $contacts['map_url']; ?>"><?php echo $contacts['map']; ?></a>
+                                <a target="_blank" href="<?php echo $contacts['map_url']; ?>"><?php echo $contacts['map']; ?></a>
                             </div>
                         </div>
                     </div>

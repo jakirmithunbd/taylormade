@@ -1758,6 +1758,19 @@ testimonials
         Contact Form
 *********************************/
 .contact-form {
+    background-color: #1b1b1b;
+    padding: 50px;
+
+    .gform_heading {
+        text-align: center;
+        margin-bottom: 55px !important;
+
+        .gform_title {
+            color: #fff !important;
+            text-transform: uppercase;
+            @include em(60px, 25, 44px);
+        }
+    }
 
     .gform_wrapper {
         margin: 0;
@@ -1773,36 +1786,28 @@ testimonials
                     padding-right: 0;
                     margin: 0;
                     font-size: 0;
-                    margin-bottom: 8px;
+                    margin-bottom: 20px;
                     position: relative;
 
-                    .gfield_label {
-                        margin: 0;
-                        float: none;
-                        font-weight: 400;
-                        color: #151515;
-                        @include em(14px, 25, 34px);
-                        top: 4px;
-                        position: absolute;
-                        left: 15px;
+                    .gfield_required {
+                        display: none;
                     }
 
                     .ginput_container {
                         margin-top: 0;
 
-                        input, textarea.medium, select {
+                        input, textarea.small, select {
                             border-radius: 0 !important;
                             width: 100% !important;
-                            font-size: 1rem !important;
-                            line-height: inherit !important;
-                            letter-spacing: 0em !important;
-                            padding: 20px !important;
+                            color: #979797 !important;
+                            font-size: 1.375rem !important;
+                            line-height: 1.36364 !important;
+                            padding: 19px 25px !important;
                             background-color: white !important;
                             font-weight: 400 !important;
-                            color: #4f4f4f !important;
-                            border: 1px solid #707070 !important;
+                            border: 0px solid #707070 !important;
                             text-transform: inherit !important;
-                            @include placeholder(#4f4f4f, 14px, 400);
+                            @include placeholder(#979797, 22px, 400);
 
                             &:hover, &:focus {
                                 outline: 0;
@@ -1810,26 +1815,9 @@ testimonials
                             }
                         }
 
-                        textarea.medium {
+                        textarea.small {
                             background-color: white !important;
                             min-height: 120px;
-                        }
-
-                        .gfield_radio {
-                            margin: 0;
-
-                            li {
-
-                                label {
-                                    font-weight: 400;
-                                    @include em(13px, 0, 19px);
-                                }
-                            }
-
-                            input[type=radio] {
-                                width: auto !important;
-                                color: #151515 !important;
-                            }
                         }
                     }
                 }
@@ -1837,7 +1825,8 @@ testimonials
         }
 
         .gform_footer {
-            margin-right: 15px;
+            margin: 0;
+            padding: 0;
             text-align: center !important;
 
             input[type=submit] {
@@ -1857,6 +1846,21 @@ testimonials
                     outline: 0;
                     outline-offset: 0;
                     background-color: $primary !important;
+                }
+            }
+
+            .btn {
+                max-width: 100%;
+            }
+
+            .triangle {
+                background-color: #378041;
+
+                &:before {
+                    right: 0;
+                    left: 0;
+                    position: absolute;
+                    content: url(../images/arrow.png);
                 }
             }
         }
