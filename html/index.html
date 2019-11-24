@@ -88,8 +88,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="company-designation">
-                        <h4>Company Designations</h4>
-                        <div class="company-content">
+                        <h4 class="wow fadeInUp">Company Designations</h4>
+                        <div class="company-content wow fadeInDown">
                             <p>Duns: 027620543      Cage: 740S1 <br>
                             MD Small Business Certified #14-162<br>
                             PGC CBBC Small Business Certified #16-726</p>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="solution-content">
+                    <div class="solution-content wow fadeInUp">
                         <h1>TaylorMade Solutions</h1>
                         <hr>
                         <p>TaylorMade Solutions, LLC is a commercial cleaning and facilities maintenance services provider. We are based in Prince George’s County and certified by the State of Maryland as a Minority Business Enterprise and a Service Disabled Veteran Owned Small Business Enterprise.</p>
@@ -122,7 +122,7 @@
 
     <div class="service-home">
         <div class="service-title text-center" style="background: url(../assets/images/s-banner.jpg);">
-            <div class="container">
+            <div class="container wow fadeInUp">
                <h2>Services</h2>
             </div>
         </div>
@@ -132,10 +132,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="service-detail">
-                            <div class="media">
+                            <div class="media wow fadeInUp">
                                 <img src="../assets/images/services-details.jpg" class="img-responsive" alt="">
                             </div>
-                            <div class="content">
+                            <div class="content wow fadeInUp">
                                 <h2>Janitorial Cleaning</h2>
                                 <p>We specialize in evaluating and delivering personalized, cost effective janitorial services and solutions for a variety of business types. We are the 24/7, 365-day single source provider for all your janitorial service needs – whether you need a one-time service call or an ongoing maintenance program. </p>
                                 <a class="btn" href="#">Learn More <span class="triangle"><img src="../assets/images/arrow.png" class="img-responsive" alt=""></span></a>
@@ -148,7 +148,7 @@
     </div>
 
     <section class="clients">
-        <div class="container">
+        <div class="container wow fadeInUp">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="client-title">Our Clients</h2>
@@ -159,19 +159,19 @@
         <div class="border">
             <div class="container">
                 <div class="border-shape"></div>
-                <p>We pride ourselves in providing service with the very highest quality. Integrity is at the center of our decisions. Great working relationships with our clients is paramount. Here are some of the businesses where our services are experienced. We bring out your best so you can do the rest.</p>
+                <p class="wow fadeInUp">We pride ourselves in providing service with the very highest quality. Integrity is at the center of our decisions. Great working relationships with our clients is paramount. Here are some of the businesses where our services are experienced. We bring out your best so you can do the rest.</p>
 
                 <div class="images-wrapper row">
-                    <div class="client-image col-md-3 col-sm-3 col-xs-6">
+                    <div class="client-image col-md-3 col-sm-3 col-xs-6 wow fadeInUp">
                         <img src="../assets/images/client-1.jpg" class="img-responsive" alt="">
                     </div>
-                    <div class="client-image col-md-3 col-sm-3 col-xs-6">
+                    <div class="client-image col-md-3 col-sm-3 col-xs-6 wow fadeInUp">
                         <img src="../assets/images/client-2.jpg" class="img-responsive" alt="">
                     </div>
-                    <div class="client-image col-md-3 col-sm-3 col-xs-6">
+                    <div class="client-image col-md-3 col-sm-3 col-xs-6 wow fadeInUp">
                         <img src="../assets/images/client-3.jpg" class="img-responsive" alt="">
                     </div>
-                    <div class="client-image col-md-3 col-sm-3 col-xs-6">
+                    <div class="client-image col-md-3 col-sm-3 col-xs-6 wow fadeInUp">
                         <img src="../assets/images/client-4.jpg" class="img-responsive" alt="">
                     </div>
                     <div class="client-image col-md-3 col-sm-3 col-xs-6">
@@ -197,19 +197,19 @@
                 <img src="../assets/images/quote.png" class="img-responsive" alt="">
                 <div class="testimonial-slider">
                     <div class="slider-item">
-                        <div class="testimonial-content">
+                        <div class="testimonial-content wow fadeInUp">
                             <h1>"Improved quality from our previous company!"</h1>
                             <p><span>Mark Anderson</span>Maryland</p>
                         </div>
                     </div>
                     <div class="slider-item">
-                        <div class="testimonial-content">
+                        <div class="testimonial-content wow fadeInUp">
                             <h1>"Improved quality from our previous company!"</h1>
                             <p><span>Mark Anderson</span>Maryland</p>
                         </div>
                     </div>
                     <div class="slider-item">
-                        <div class="testimonial-content">
+                        <div class="testimonial-content wow fadeInUp">
                             <h1>"Improved quality from our previous company!"</h1>
                             <p><span>Mark Anderson</span>Maryland</p>
                         </div>
@@ -262,21 +262,21 @@
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script>
-        // wow = new WOW(
-        //   {
-        //     animateClass: 'animated',
-        //     offset:       100,
-        //     callback:     function(box) {
-        //       console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        //     }
-        //   }
-        // );
-        // wow.init();
-        // document.getElementById('moar').onclick = function() {
-        //   var section = document.createElement('section');
-        //   section.className = 'section--purple wow fadeInDown';
-        //   this.parentNode.insertBefore(section, this);
-        // };
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
     </script>
     </body>
 </html>

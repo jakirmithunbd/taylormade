@@ -4,7 +4,7 @@
 require_once get_theme_file_path("/inc/wp-bootstrap-navwalker.php");
 require_once get_theme_file_path("/inc/logi-login-page-design.php");
 
-function pet_setup_theme(){
+function tay_setup_theme(){
 	add_theme_support('title-tag');
 	add_theme_support('post-thumbnails');
 	add_theme_support('custom-header');
@@ -13,34 +13,30 @@ function pet_setup_theme(){
     add_theme_support('woocommerce');
 
 	//load text domain
-	load_theme_textdomain('cli', get_template_directory() . '/language');
+	load_theme_textdomain('tay', get_template_directory() . '/language');
     add_image_size( 'best_selling_image', '160' , '240', true );
 
 	// Menu Register 
 	if(function_exists('register_nav_menus')){
-		register_nav_menus(array(
-      'menu-1'	=>	__('Main Menu', 'cli'),
-      'menu-2'	=>	__('Footer Menu', 'cli'),
-      'menu-3'  =>  __('Language Menu', 'cli')
+    	register_nav_menus(array(
+          'menu-1'	=>	__('Main Menu', 'tay')
 		));
 	}
 }
 
-add_action('after_setup_theme', 'pet_setup_theme');
+add_action('after_setup_theme', 'tay_setup_theme');
 
-function pet_setup_assets(){
+function tay_setup_assets(){
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('dashicon');
 
 	//script ===
 	wp_enqueue_script('bootstrap', get_theme_file_uri('/assets/js/bootstrap.min.js'), array('jquery'), '0.0.1', true);
     wp_enqueue_script('wow', get_theme_file_uri('/assets/js/wow.min.js'), array('jquery'), '0.0.1', true);
-    wp_enqueue_script('waypoints', get_theme_file_uri('/assets/js/waypoints.min.js'), array('jquery'), '0.0.1', true);
     wp_enqueue_script('slick', get_theme_file_uri('/assets/js/slick.min.js'), array('jquery'), '0.0.1', true);
-    wp_enqueue_script('mixitup', get_theme_file_uri('/assets/js/mixitup.min.js'), array('jquery'), '0.0.1', true);
-    wp_enqueue_script('counterup', get_theme_file_uri('/assets/js/counterup.min.js'), array('jquery'), '0.0.1', true);
+    wp_enqueue_script('masonry', get_theme_file_uri('/assets/js/masonry.min.js'), array('jquery'), '0.0.1', true);
+    wp_enqueue_script('imageload', get_theme_file_uri('/assets/js/imageload.js'), array('jquery'), '0.0.1', true);
     wp_enqueue_script('sidr', get_theme_file_uri('/assets/js/sidr.min.js'), array('jquery'), '0.0.1', true);
-    wp_enqueue_script('magnific-popup', get_theme_file_uri('/assets/js/magnific-popup.min.js'), array('jquery'), '0.0.1', true);
 
     wp_enqueue_script('main_js', get_theme_file_uri('/assets/js/scripts.js'), array('jquery'), time(), true);
 
@@ -58,11 +54,10 @@ wp_localize_script('main_js', 'ajax', $data);
 	wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/css/font-awesome.min.css'));
     wp_enqueue_style('animate', get_theme_file_uri('/assets/css/animate.min.css'));
     wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.min.css'));
-    wp_enqueue_style('mag', get_theme_file_uri('/assets/css/magnific-popup.css'));
 	wp_enqueue_style('main_style', get_theme_file_uri('/assets/css/main-style.css'), null, time());
-	wp_enqueue_style('logi_style', get_stylesheet_uri(), null, time());
+	wp_enqueue_style('tay_style', get_stylesheet_uri(), null, time());
 }
-add_action('wp_enqueue_scripts', 'pet_setup_assets');
+add_action('wp_enqueue_scripts', 'tay_setup_assets');
 
 /**
  * Dashboard google map api key support.
@@ -148,7 +143,7 @@ add_action('acf/input/admin_head', 'my_acf_admin_head');
  *
  * 
  */
-function pet_silencer_widgets_init() {
+function tay_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar', 'pet' ),
         'id'            => 'sidebar-1',
@@ -159,7 +154,7 @@ function pet_silencer_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 }
-add_action( 'widgets_init', 'pet_silencer_widgets_init' );
+add_action( 'widgets_init', 'tay_widgets_init' );
 
 
 function add_file_types_to_uploads($file_types){
@@ -192,108 +187,6 @@ function additional_scripts(){
     <?php
 }
 add_action( 'wp_footer', 'additional_scripts', 100 );
-
-function pet_search_form() {
-  $form ='
-        <form id="search-box" role="search" method="get" action="'. esc_url( home_url( '/' ) ) . '">
-        <div class="search-wrapper">
-            <button type="submit"><i class="fas fa-search"></i></button>
-            <input id="dakota_search_focus" type="search" name="s" autofocus class="form-control" placeholder="Search"/>
-        </div><!-- /input-group -->
-    </form>';
-
-    return $form;
-}
-
- function my_search_form( $form ) {
-    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="search-form-wraper">
-    <input type="text" placeholder="Search Here" value="' . get_search_query() . '" name="s" id="s" />
-    <button id="searchsubmit" type="submit"><span class="fas fa-search"></button>
-    </div>
-    </form>';
-    return $form;
-}
-
-add_filter( 'get_search_form', 'my_search_form', 100 );
-
-/* Header right mini cart number ajaxify */
-function vexp_header_ajaxify_add_to_cart( $fragments ) {
-  global $woocommerce;
-  ob_start();
-?>
-<a class="ajaxify_cart" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" >
-    <div class="cart-icon">
-        <img src="<?php echo get_theme_file_uri( '/assets/images/cart.png' ); ?>" class="img-responsive" alt="">
-        <div class="count cart_quantity"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'dakota'), $woocommerce->cart->cart_contents_count);?></div>
-    </div>
-</a>
-<?php 
-  $fragments['.ajaxify_cart'] = ob_get_clean();
-  return $fragments;
-}
-add_filter('add_to_cart_fragments', 'vexp_header_ajaxify_add_to_cart');
-
-
-
-//  Serviecs Custom Post Type
-add_action('init','logi_services_custom_post');
-function logi_services_custom_post() {
-  register_post_type( 'services',
-    array(
-      'labels' =>
-        array(
-          'name' => __( 'Services', 'cli'),  
-          'singular_name' => __( 'Service', 'cli'),
-          'add_new_item' => __('Add New Service', 'cli'), 
-          'add_new' => __( 'Add New Service', 'cli'),
-          'edit_item' => __( 'Edit Service', 'cli'),
-          'new_item' => __( 'New Service', 'cli' ),
-          'view_item' => __( 'View Service' ),
-          'not_found' => __( 'Sorry, we couldn\'t find the Service you are looking for.',  'cli' ),
-        ),
-      
-      'public' => true,
-      'menu_icon'=>'dashicons-universal-access-alt',
-      'supports' => array( 'title','excerpt', 'thumbnail')
-    )
-  );
-}
-
-//  Serviecs Custom Post Type
-add_action('init','logi_portpofilo_custom_post');
-function logi_portpofilo_custom_post() {
-  register_post_type( 'portfolio',
-    array(
-      'labels' =>
-        array(
-          'name' => __( 'Portfolios', 'cli'),  
-          'singular_name' => __( 'Portfolio', 'cli'),
-          'add_new_item' => __('Add New Portfolio', 'cli'), 
-          'add_new' => __( 'Add New Portfolio', 'cli'),
-          'edit_item' => __( 'Edit Portfolio', 'cli'),
-          'new_item' => __( 'New Portfolio', 'cli' ),
-          'view_item' => __( 'View Portfolio' ),
-          'not_found' => __( 'Sorry, we couldn\'t find the Portfolio you are looking for.',  'cli' ),
-        ),
-      
-      'public' => true,
-      'menu_icon'=>'dashicons-analytics',
-      'supports' => array( 'title','excerpt', 'thumbnail')
-    )
-  );
-
-  register_taxonomy(  
-        'portfolio_categories',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-        'portfolio',        //post type name
-        array(  
-            'hierarchical' => true,  
-            'label' => 'Portfolio Categories',  //Display name
-            'query_var' => true
-        )  
-    );  
-}
-
 
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){

@@ -56,7 +56,7 @@
     <div class="header_gutter"></div>
 
     <section class="page-banner" style="background: url(../assets/images/page-banner.jpg);">
-        <div class="container">
+        <div class="container wow fadeInUp">
             <div class="text-center text-uppercase page-title">Services</div>
         </div>
     </section>
@@ -65,12 +65,12 @@
         <div class="container">
             <div class="row align-center">
                 <div class="col-md-6 col-sm-12">
-                    <div class="media">
+                    <div class="media wow fadeInUp">
                         <img src="../assets/images/service-1.jpg" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="service-content">
+                    <div class="service-content wow fadeInUp">
                         <h1>Janitorial Cleaning</h1>
                         <p>Our goal is to preserve optimal hygiene in your workplace.  With janitorial cleaning from TaylorMade Solutions, you can give your employees a work environment that is dust-free, germ-free, and contaminant-free. Daily deep cleaning of offices has the potential to prevent the spread of infections, thus reducing employee sick days and increasing productivity. Every work environment is unique; therefore, we create a cleaning service plan that is customized for your office whether for daily, nightly or one-time facility cleaning services.  Our state-of the art, advanced cleaning system guarantees a thorough, top-to-bottom, sparkling clean result every time.</p>
                     </div>
@@ -79,12 +79,12 @@
 
             <div class="row align-center reverse">
                 <div class="col-md-6 col-sm-12">
-                    <div class="media">
+                    <div class="media wow fadeInUp">
                         <img src="../assets/images/service-2.jpg" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="service-content">
+                    <div class="service-content wow fadeInUp">
                         <h1>Commercial Kitchen Deep Clean</h1>
                         <p>Customers quickly judge the quality of your products, services and brand by the appearance and cleanliness of your facility.  From floor to ceiling and all those hard-to-reach places, TaylorMade Solutions specializes in cleaning and sanitizing your entire facility. We’ll make sure to get every piece of equipment and everything around, behind and underneath each piece. No matter what you need, we’ll tailor a package to meet your specifications and get it done with no hassle to you. Using the highest quality chemicals, professional equipment, and custom cleaning methods, we have more than 10 years’ experience with a crew who is insured and properly trained.  </p>
                     </div>
@@ -93,12 +93,12 @@
 
             <div class="row align-center">
                 <div class="col-md-6 col-sm-12">
-                    <div class="media">
+                    <div class="media wow fadeInUp">
                         <img src="../assets/images/service-3.jpg" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="service-content">
+                    <div class="service-content wow fadeInUp">
                         <h1>Floor Care Solutions</h1>
                         <p>Floors need regular cleaning and care to maintain their appearance and reduce wear, and most flooring types need deep cleaning or refinishing at least once a year. Our day-to-day floor cleaning services use HEPA-filter vacuums and microfiber mop pads to capture more dirt, dust, and grime than other cleaning providers, giving your floors a spotless, sparkling appearance. Deep cleaning, polishing, and refinishing services are performed using specialized equipment and cleaning products. These services help remove deep-seated grit and tough stains, restoring the beauty and luster of hard floors. We offer the expertise, products, and technologies that modern businesses need to keep floors looking their best year after year and minimize the impact of floor cleaning on your bottom line.</p>
                     </div>
@@ -231,21 +231,21 @@
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script>
-        // wow = new WOW(
-        //   {
-        //     animateClass: 'animated',
-        //     offset:       100,
-        //     callback:     function(box) {
-        //       console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        //     }
-        //   }
-        // );
-        // wow.init();
-        // document.getElementById('moar').onclick = function() {
-        //   var section = document.createElement('section');
-        //   section.className = 'section--purple wow fadeInDown';
-        //   this.parentNode.insertBefore(section, this);
-        // };
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
     </script>
     </body>
 </html>

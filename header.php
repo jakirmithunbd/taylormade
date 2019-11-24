@@ -22,50 +22,26 @@
     <?php 
     $queried_object = get_queried_object();
     $logo = get_field('logo', 'options');
-    $contact = get_field('contacts', 'options');
-    $social = get_field('social_media', 'options');
-    $header_bg = get_field('header_bg', 'options') ? get_field('header_bg', 'options') : get_theme_file_uri( '/assets/images/header-bg.jpg' ); 
     ?>
 
     <header class="header">
         <nav class="navbar">
             <div class="container-fluid">
-                <div class="navigation">
-
+                <div class="navbar-wrapper">
+                    <?php if ($logo): ?>
                     <div class="navbar-header">
-                        <a href="<?php echo site_url(); ?>">
-                            <img src="<?php echo $logo; ?>" class="img-responsive" alt="">
-                        </a>
+                        <div class="navbar-brand">
+                            <a href="<?php echo site_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive" alt="Logo Image"></a>
+                        </div><!-- / Logo  -->
                     </div>
-
-                    <div class="language-social-wrapper">
-                        <div class="social-media">
-                            <a href="#" id="search-icon"><span class="fas fa-search"></span></a>
-                            <?php if ($social) : foreach ($social as $item) : ?>
-                            <a target="_blank" href="<?php echo $item['url']; ?>"><span class="fab fa-<?php echo $item['icon']['value']; ?>"></span></a>
-                            <?php endforeach; endif; ?>
-                            <?php echo pet_search_form(); ?>
-                        </div>
-
-                        <?php if (function_exists('wp_nav_menu')): ?>
-                            <?php wp_nav_menu( 
-                                  array(
-                                  'menu'               => 'Language Menu',
-                                  'theme_location'     => 'menu-3',
-                                  'depth'              => 3,
-                                  'container'          => 'false',
-                                  'menu_class'         => 'list-inline list-unstyle',
-                                  'menu_id'            => '',
-                                  'fallback_cb'        => 'wp_bootstrap_navwalker::fallback',
-                                  'walker'             => new wp_bootstrap_navwalker()
-                                  ) 
-                                ); 
-                            ?>
-                        <?php endif; ?>
-                    </div>
-
+                    <?php else: ?>
+                    <a href="#sidr" class="openMenu navbar-toggle collapsed">
+                        <span class="fas fa-bars"></span>
+                    </a>
+                    <?php endif ?>
+                                           
                     <div id="sidr" class="collapse navbar-collapse">
-                        <span class="closeMenu fa fa-long-arrow-alt-right"></span>
+                        <span class="fas fa-long-arrow-alt-right closeMenu hidden"></span>
                         <?php if (function_exists('wp_nav_menu')): ?>
                             <?php wp_nav_menu( 
                                   array(
@@ -82,13 +58,10 @@
                             ?>
                         <?php endif; ?>
                     </div>
-
-                    <a href="#sidr" class="openMenu navbar-toggle collapsed">
-                        <img src="<?php echo get_theme_file_uri( '/assets/images/menu.png' ); ?>" class="img-responsive" alt="">
-                    </a>
                 </div>
             </div>
         </nav><!-- / navigation  -->
     </header><!-- / Header Area  -->
+    <div class="header_gutter"></div>
 
     
