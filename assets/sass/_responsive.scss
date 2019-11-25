@@ -440,6 +440,13 @@
         }
     }
 
+    .contact-information {
+
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+
     .testimonial {
 
         .testimonial-slider {
@@ -603,6 +610,18 @@
     body {
         font-size: 1rem;
         line-height: 1;
+    }
+    .solution {
+
+        .solution-content {
+
+            p {
+
+                a {
+                    font-size: inherit;
+                }
+            }
+        }
     }
     .contact-area {
 
