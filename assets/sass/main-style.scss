@@ -909,6 +909,8 @@ button {
 // Slider arrow
 
 .slick-prev, .slick-next {
+    height: auto;
+    width: auto;
 
     &:before {
         opacity: 1;
@@ -1015,7 +1017,7 @@ button {
         }
 
         .company-content {
-            padding: 20px 45px;
+            padding: 20px 35px;
 
             p {
                 @include em(20px, 0, 26px);
@@ -1040,6 +1042,14 @@ button {
             padding-bottom: 40px;
             color: #49494a;
             @include em(72px, 0, 80px);
+        }
+
+        .border {
+            padding-bottom: 55px;
+
+            .border-shape {
+                display: block;
+            }
         }
 
         p {
@@ -2079,11 +2089,10 @@ Testimonial
     .align-center {
         padding-top: 15px;
         padding-bottom: 15px;
-        align-items: flex-start;
     }
 
     .media {
-        margin: 35px;
+        margin: 0 0 70px;
         box-shadow: 0px 10px 50px 2px rgba(0,0,0,.2);
         
         img {

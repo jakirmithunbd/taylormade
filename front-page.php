@@ -7,7 +7,7 @@ get_header(); ?>
         <div class="container-fluid">
             <div class="masonry-container row">
                 <?php $gallery = get_field('gallery'); if($gallery) : foreach ($gallery as $item) : ?>
-                <div class="item col-md-4 col-xs-12">
+                <div class="item col-md-4 col-sm-6 col-xs-12">
                     <img src="<?php echo $item['url']; ?>" class="img-responsive" alt="">
                 </div><!-- / Gallery item -->
             <?php endforeach; endif; ?>
@@ -16,7 +16,7 @@ get_header(); ?>
     </section>
 
     <section class="solution">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
                     <?php $company_designations = get_field('company_designations'); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
                     <?php $taylormade_solutions = get_field('taylormade_solutions'); ?>
                     <div class="solution-content wow fadeInUp">
                         <h1><?php echo $taylormade_solutions['title']; ?></h1>
-                        <hr>
+                        <div class="border"><span class="border-shape"></span></div>
                         <?php echo $taylormade_solutions['content']; ?>
                     </div>
                 </div>

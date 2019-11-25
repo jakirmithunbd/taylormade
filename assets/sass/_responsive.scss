@@ -276,6 +276,23 @@
             }
         }
     }
+
+    .solution {
+
+        .company-designation {
+
+            h4 {
+                text-align: center;
+            }
+
+            .company-content {
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -323,6 +340,17 @@
                 font-size: 2.75rem;
                 margin-bottom: 20px;
             }
+        }
+    }
+
+    .clients {
+
+        .client-title {
+            padding-bottom: 25px;
+        }
+
+        p {
+            padding-top: 35px;
         }
     }
 
@@ -427,6 +455,10 @@
 
         .solution-content {
             padding: 30px 0px;
+
+            .border {
+                padding-bottom: 30px;
+            }
 
             h1 {
                 margin-bottom: 20px;
@@ -534,7 +566,44 @@
 }
 
 @media only screen and (max-width: 380px) {
+    body {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    .contact-area {
 
+        .contact-information {
+
+            .info-list {
+
+                span {
+                    height: 40px;
+                    width: 40px;
+                    line-height: 30px;
+                }
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .footer {
+
+        .footer-wrapper {
+
+            .contact-info {
+
+                .info-item {
+
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        } 
+    }
 }
 
 @media only screen and (max-width: 320px) {
