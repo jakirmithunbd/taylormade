@@ -270,6 +270,7 @@
 
         .media {
             display: inline-block;
+            margin-bottom: 30px;
 
             img {
                 width: auto;
@@ -344,6 +345,7 @@
     }
 
     .clients {
+        padding-bottom: 80px;
 
         .client-title {
             padding-bottom: 25px;
@@ -438,6 +440,21 @@
         }
     }
 
+    .testimonial {
+
+        .testimonial-slider {
+
+            .testimonial-content {
+
+                h1 {
+                    font-size: 1.75rem;
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
     .about {
         padding: 35px 0;
 
@@ -518,7 +535,6 @@
                 display: inherit;
 
                 a {
-                    display: block;
                     margin: 10px 0 0;
                 }
             }
@@ -549,6 +565,24 @@
                     }
                 }
             }
+        }
+    }
+
+    .solution {
+
+        .company-designation {
+
+            h4 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .clients {
+        padding-bottom: 40px;
+
+        .client-title {
+            font-size: 2.6rem;
         }
     }
 }
