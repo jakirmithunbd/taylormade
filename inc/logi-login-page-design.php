@@ -61,7 +61,7 @@ function verp_custom_login_page() {
         	height: 81px !important; 
         	background-size: 170px !important; 
         	position: relative; 
-        	top: -55px; 
+        	top: -90px; 
         }
 		.login h1 a:focus { 
 			outline: 0 !important; 

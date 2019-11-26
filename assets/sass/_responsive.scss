@@ -297,7 +297,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .contact-area {
+    .contact-area, .content-area {
         padding: 60px 0;
     }
 
@@ -530,9 +530,30 @@
             }
         }
     }
+
+    .schedules {
+
+        .schedule {
+
+            .date, a {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 480px) {
+    .content-area {
+        padding: 40px 0;
+    }
+
+    .schedules {
+
+        .schedule {
+            padding: 15px 0;
+        }
+    }
+
     .contact-area {
         padding: 45px 0 0;
 
@@ -607,55 +628,15 @@
 }
 
 @media only screen and (max-width: 380px) {
-    body {
-        font-size: 1rem;
-        line-height: 1;
-    }
-    .solution {
+    .schedules {
 
-        .solution-content {
+        .schedule {
+            border-width: 2px;
 
-            p {
-
-                a {
-                    font-size: inherit;
-                }
+            .date, a {
+                font-size: 1.2rem;
             }
         }
-    }
-    .contact-area {
-
-        .contact-information {
-
-            .info-list {
-
-                span {
-                    height: 40px;
-                    width: 40px;
-                    line-height: 30px;
-                }
-
-                a {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-
-    .footer {
-
-        .footer-wrapper {
-
-            .contact-info {
-
-                .info-item {
-
-                    a {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        } 
     }
 }
 
