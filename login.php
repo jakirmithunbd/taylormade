@@ -22,14 +22,9 @@ $bg = get_the_post_thumbnail_url(get_the_ID()) ? get_the_post_thumbnail_url(get_
                 <div class="col-sm-12">
                     <div class="page-details wow fadeInUp">
                         <div class="schedules">
-                        	<?php $schedule = get_field('schedule'); if($schedule) : foreach ($schedule as $item) : ?>
-                        	<?php if (post_password_required()): ?>
-                        		<div class="schedule">
-	                        		<div class="date"><?php echo $item['date']; ?> - Schedule</div>
-	                        		<a href="<?php echo $item['download']; ?>">VIEW</a>
-	                        	</div>
-                        	<?php endif; ?>
-                        	<?php endforeach; endif; ?>
+                        	<?php if (have_posts()): while (have_posts()): the_post(); ?>
+	                            <?php the_content(); ?>
+	                        <?php endwhile; endif; ?>
                         </div>
                     </div>
                 </div>
