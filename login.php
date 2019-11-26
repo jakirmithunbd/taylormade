@@ -9,11 +9,13 @@ get_header(); ?>
 $bg = get_the_post_thumbnail_url(get_the_ID()) ? get_the_post_thumbnail_url(get_the_ID()) : get_theme_file_uri( '/assets/images/page-banner.jpg' ); 
  
 ?>
+<?php if (!post_password_required()): ?>
 <section class="page-banner" style="background: url(<?php echo $bg; ?>);">
     <div class="container wow fadeInUp">
         <div class="text-center text-uppercase page-title"><?php _e('Schedule', 'tay'); ?></div>
     </div>
 </section>
+<?php endif; ?>
 
 <div id="primary" class="content-area">
     <section class="page-content">
