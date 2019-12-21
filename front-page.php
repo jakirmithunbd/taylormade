@@ -5,7 +5,10 @@ Template Name: Home
 get_header(); ?>
     <section class="gallery">
         <?php $gallery_image =  get_field('gallery_image'); ?>
-        <img src="<?php echo $gallery_image['url']; ?>" alt="<?php echo $gallery_image['title']; ?>">
+        <img src="<?php echo $gallery_image['url']; ?>" class="img-responsive hidden-xs" alt="<?php echo $gallery_image['title']; ?>">
+
+        <?php $mobile_gallery_image =  get_field('mobile_gallery_image'); ?>
+        <img src="<?php echo $mobile_gallery_image['url']; ?>" class="img-responsive visible-xs" alt="<?php echo $mobile_gallery_image['title']; ?>">
     </section>
 
     <section class="solution">
