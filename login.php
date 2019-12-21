@@ -1,4 +1,3 @@
-
 <?php 
 /*
 Template Name: Schedule
@@ -12,7 +11,7 @@ $bg = get_the_post_thumbnail_url(get_the_ID()) ? get_the_post_thumbnail_url(get_
 <?php if (!post_password_required()): ?>
 <section class="page-banner" style="background: url(<?php echo $bg; ?>);">
     <div class="container wow fadeInUp">
-        <div class="text-center text-uppercase page-title"><?php _e('Schedule', 'tay'); ?></div>
+        <div class="text-center text-uppercase page-title"><?php _e('Bulletin Board', 'tay'); ?></div>
     </div>
 </section>
 <?php endif; ?>
