@@ -673,7 +673,7 @@ button {
     left: 0;
     width: 100%;
     z-index: 1024;
-    padding: 31px 0;
+    padding: 32px 0;
     position: fixed;
     background-color: #000;
     transition: all .3s ease;
@@ -981,22 +981,10 @@ button {
 
 /* Home Gallery */
 .gallery {
-    overflow: hidden;
-
-    .container-fluid, .row {
-        padding: 0;
-    }
-
-    .masonry-container {
-
-        .item {
-            padding: 0;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
+   
+   img {
+    width: 100%;
+   }
 }
 
 /* Home Gallery */

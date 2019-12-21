@@ -4,15 +4,8 @@ Template Name: Home
 */
 get_header(); ?>
     <section class="gallery">
-        <div class="container-fluid">
-            <div class="masonry-container row">
-                <?php $gallery = get_field('gallery'); if($gallery) : foreach ($gallery as $item) : ?>
-                <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <img src="<?php echo $item['url']; ?>" class="img-responsive" alt="">
-                </div><!-- / Gallery item -->
-            <?php endforeach; endif; ?>
-            </div>
-        </div>
+        <?php $gallery_image =  get_field('gallery_image'); ?>
+        <img src="<?php echo $gallery_image['url']; ?>" alt="<?php echo $gallery_image['title']; ?>">
     </section>
 
     <section class="solution">
